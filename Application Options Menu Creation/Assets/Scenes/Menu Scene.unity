@@ -4558,6 +4558,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c44ca98cd8a8e3e408cc4418fc9f2b9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameTitle: {fileID: 189395016}
+  menuOptions: {fileID: 1368530546}
   optionsPanel: {fileID: 433678214}
 --- !u!1 &1325397754
 GameObject:
