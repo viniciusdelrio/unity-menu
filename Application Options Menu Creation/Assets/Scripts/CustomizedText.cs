@@ -23,10 +23,10 @@ namespace MyMenu
             OptionsController.OnFontColorChanged.RemoveListener(HandleFontColorChanged);
         }
 
-        public void HandleFontSizeChanged(float fontSize) => 
+        private void HandleFontSizeChanged(float fontSize) => 
             customizedText.fontSize = fontSize;
 
-        public void HandleFontColorChanged(Color fontColor) =>
+        private void HandleFontColorChanged(Color fontColor) =>
             customizedText.color = fontColor;
     }
 }

@@ -6,6 +6,7 @@ namespace MyMenu
     public class OptionsController : MonoBehaviour
     {
         public static FloatEvent OnFontSizeChanged = new FloatEvent();
+        public static FloatEvent OnAudioVolumeChanged = new FloatEvent();
         public static ColorEvent OnFontColorChanged = new ColorEvent();
 
         public void OnFontSize_ValueChanged(float size) => 
@@ -13,5 +14,8 @@ namespace MyMenu
 
         public void OnFontColor_ValueChanged(Color color) =>
             OnFontColorChanged.Invoke(color);
+
+        public void OnAudioVolume_ValueChanged(float volume) =>
+            OnAudioVolumeChanged.Invoke(volume);
     }
 }
