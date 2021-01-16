@@ -13,15 +13,20 @@ namespace MyMenu
 
         private void OnEnable()
         {
-            OptionsController.OnFontSizeValueChanged.AddListener(HandleFontSizeValueChanged);
+            OptionsController.OnFontSizeChanged.AddListener(HandleFontSizeChanged);
+            OptionsController.OnFontColorChanged.AddListener(HandleFontColorChanged);
         }
 
         private void OnDisable()
         {
-            OptionsController.OnFontSizeValueChanged.RemoveListener(HandleFontSizeValueChanged);
+            OptionsController.OnFontSizeChanged.RemoveListener(HandleFontSizeChanged);
+            OptionsController.OnFontColorChanged.RemoveListener(HandleFontColorChanged);
         }
 
-        public void HandleFontSizeValueChanged(float fontSize) => 
+        public void HandleFontSizeChanged(float fontSize) => 
             customizedText.fontSize = fontSize;
+
+        public void HandleFontColorChanged(Color fontColor) =>
+            customizedText.color = fontColor;
     }
 }

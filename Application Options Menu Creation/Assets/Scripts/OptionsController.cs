@@ -5,9 +5,13 @@ namespace MyMenu
 {
     public class OptionsController : MonoBehaviour
     {
-        public static FloatEvent OnFontSizeValueChanged = new FloatEvent();
+        public static FloatEvent OnFontSizeChanged = new FloatEvent();
+        public static ColorEvent OnFontColorChanged = new ColorEvent();
 
-        public void OnFontSize_ValueChanged(float value) => 
-            OnFontSizeValueChanged.Invoke(value);
+        public void OnFontSize_ValueChanged(float size) => 
+            OnFontSizeChanged.Invoke(size);
+
+        public void OnFontColor_ValueChanged(Color color) =>
+            OnFontColorChanged.Invoke(color);
     }
 }

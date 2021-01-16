@@ -1,9 +1,10 @@
 using System;
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace MyMenu.Events
 {
     [Serializable]
-    public class IntEvent : UnityEvent<int>
+    public class ColorEvent : UnityEvent<Color>
     { }
 }
